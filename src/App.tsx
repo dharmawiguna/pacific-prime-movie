@@ -33,6 +33,31 @@ const AppRouter = () => (
             path={route.HOME}
           />
           <Route
+            component={withProgress(view.DiscoverMovies)}
+            exact={true}
+            path={route.DISCOVER}
+          />
+          <Route
+            component={withProgress(view.TrendingMovies)}
+            exact={true}
+            path={route.TRENDING}
+          />
+          <Route
+            component={withProgress(view.TvShows)}
+            exact={true}
+            path={route.TV}
+          />
+          <Route
+            component={withProgress(view.TopRatedMovies)}
+            exact={true}
+            path={route.TOP_RATED}
+          />
+          <Route
+            component={withProgress(view.UpcomingMovies)}
+            exact={true}
+            path={route.UPCOMING}
+          />
+          <Route
             component={withProgress(view.PopularMovies)}
             exact={true}
             path={route.POPULAR}

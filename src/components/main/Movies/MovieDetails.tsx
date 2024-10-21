@@ -21,7 +21,7 @@ const MovieDetails = () => {
               <Link
                 className="button--key"
                 key={genre.id + genre.name}
-                to={`#`}
+                to={`/genre/${genreName}/${genre.id}`}
               >
                 {genre.name}
               </Link>
