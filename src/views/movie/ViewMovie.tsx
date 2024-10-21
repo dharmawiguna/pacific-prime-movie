@@ -1,10 +1,4 @@
-import {
-  MovieCast,
-  MovieOverview,
-  MoviePoster,
-  MovieReviews,
-  SimilarMovies,
-} from "@app/components/main";
+import { MovieCast, MovieOverview } from "@app/components/main";
 import { useDidMount, useDocumentTitle } from "@app/hooks";
 import { fetchSelectedMovie } from "@app/redux/actions";
 import { IRootState, TMediaType } from "@app/types/types";

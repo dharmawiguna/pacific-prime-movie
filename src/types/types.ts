@@ -15,8 +15,15 @@ export interface IFilterProps {
   query: string;
 }
 
-export type TSortType = 'popularity.desc' | 'popularity.asc' | 'release_date.desc' | 'release_date.asc' | 'vote_count.desc' |
-  'vote_count.asc' | 'original_title.asc' | 'original_title.desc';
+export type TSortType =
+  | "popularity.desc"
+  | "popularity.asc"
+  | "release_date.desc"
+  | "release_date.asc"
+  | "vote_count.desc"
+  | "vote_count.asc"
+  | "original_title.asc"
+  | "original_title.desc";
 
 export interface IFilterState {
   tv: IFilterProps;
@@ -34,18 +41,13 @@ export interface IGenreState {
 }
 
 export interface IMovieState {
-  trending: IResponse<IMovieData[]> | null,
-  discover: IResponse<IMovieData[]> | null,
   current: {
-    movie: IMovieData | null,
-    keywords: IKeyword[],
-    casts: IActor[],
-    reviews: IReview[],
-  },
-  popular: IResponse<IMovieData[]> | null,
-  topRated: IResponse<IMovieData[]> | null,
-  upcoming: IResponse<IMovieData[]> | null,
-  tvShows: IResponse<IMovieData[]> | null,
+    movie: IMovieData | null;
+    keywords: IKeyword[];
+    casts: IActor[];
+    reviews: IReview[];
+  };
+  popular: IResponse<IMovieData[]> | null;
 }
 
 export interface IPeopleState {
@@ -53,7 +55,7 @@ export interface IPeopleState {
   current: {
     actor: IActor | null;
     casting: IMovieData[] | [];
-  }
+  };
 }
 
 export interface ISearchState {
@@ -64,9 +66,9 @@ export interface ISearchState {
   recent: string[];
 }
 
-export type TFilterCategory = 'discover' | 'tv';
+export type TFilterCategory = "discover" | "tv";
 
-export type TMediaType = 'movie' | 'tv';
+export type TMediaType = "movie" | "tv";
 
 export interface IMovieData {
   adult?: boolean;
@@ -98,12 +100,12 @@ export interface IMovieData {
   videos: {
     id: number;
     results: IVideo[];
-  }
+  };
   similar?: IResponse<IMovieData[]>;
   images?: {
     backdrops: IImage[];
     posters: IImage[];
-  }
+  };
 }
 
 export interface IVideo {
@@ -112,7 +114,13 @@ export interface IVideo {
   name: string;
   site: string;
   size: 360 | 480 | 720 | 1080;
-  type: 'Trailer' | 'Teaser' | 'Clip' | 'Featurette' | 'Behind the Scenes' | 'Bloopers';
+  type:
+    | "Trailer"
+    | "Teaser"
+    | "Clip"
+    | "Featurette"
+    | "Behind the Scenes"
+    | "Bloopers";
 }
 
 export type IMovieGenreIds = Array<number>;
@@ -175,7 +183,7 @@ export interface IActor extends ICast {
   place_of_birth: string;
   images: {
     profiles: IImage[];
-  }
+  };
 }
 
 export interface IResponse<T> {
