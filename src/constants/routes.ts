@@ -1,0 +1,13 @@
+export const HOME = "/";
+export const DISCOVER = "/discover";
+export const TRENDING = "/trending";
+export const TV = "/tv";
+export const TOP_RATED = "/top_rated";
+export const UPCOMING = "/upcoming";
+export const POPULAR = "/popular";
+export const VIEW_MOVIE = "/view/:category/:id";
+export const SEARCH = "/search/movie/:query";
+export const VIEW_MOVIE_POSTER = "/view/movie/:id/images";
+export const VIEW_MOVIE_CASTS = "/view/movie/:id/casts";
+export const NETWORK_ERROR = "/network-error";
+export const ERROR = "/error";
