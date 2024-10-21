@@ -16,12 +16,11 @@ const MovieDetails = () => {
         <div className="movie__details-genre">
           <h4>Genres</h4>
           {movie.genres.map((genre) => {
-            const genreName = genre.name.toLowerCase().replace(" ", "-");
             return (
               <Link
                 className="button--key"
                 key={genre.id + genre.name}
-                to={`/genre/${genreName}/${genre.id}`}
+                to={`#`}
               >
                 {genre.name}
               </Link>

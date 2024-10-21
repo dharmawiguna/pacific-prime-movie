@@ -2,18 +2,11 @@ import PeopleList from "@app/components/main/People/PeopleList";
 import { IRootState } from "@app/types/types";
 import React from "react";
 import { useSelector } from "react-redux";
-import { useHistory, useParams, withRouter } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 import MovieDetails from "./MovieDetails";
 
 const MovieCast = () => {
-  const history = useHistory();
-  const params = useParams<{ id: string }>();
   const casts = useSelector((state: IRootState) => state.movies.current.casts);
-
-  const onClickLink = () => {
-    history.push(`/view/movie/${params.id}/casts`);
-    window.scrollTo(0, 0);
-  };
 
   return (
     <div className="movie__casts">

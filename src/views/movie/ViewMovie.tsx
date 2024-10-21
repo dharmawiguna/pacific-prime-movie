@@ -1,10 +1,4 @@
-import {
-  MovieCast,
-  MovieOverview,
-  MoviePoster,
-  MovieReviews,
-  SimilarMovies,
-} from "@app/components/main";
+import { MovieCast, MovieOverview, MoviePoster } from "@app/components/main";
 import { useDidMount, useDocumentTitle } from "@app/hooks";
 import { fetchSelectedMovie } from "@app/redux/actions";
 import { IRootState, TMediaType } from "@app/types/types";
@@ -44,10 +38,6 @@ const ViewMovie: React.FC<RouteParams> = ({ history, match }) => {
     if (parseInt(id, 10) !== movie?.id) {
       dispatch(fetchSelectedMovie(match.params.category, id));
     }
-  };
-
-  const onClickViewImage = () => {
-    history.push(`/view/movie/${match.params.id}/images`);
   };
 
   return !isLoading ? (

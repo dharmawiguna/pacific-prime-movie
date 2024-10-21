@@ -1,5 +1,5 @@
 /* eslint-disable react/jsx-boolean-value */
-import { ThemeToggler, TopProgressLoader } from "@app/components/common";
+import { TopProgressLoader } from "@app/components/common";
 import * as route from "@app/constants/routes";
 import React, { useEffect, useState } from "react";
 import { Link, NavLink, withRouter } from "react-router-dom";
